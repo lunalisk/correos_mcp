@@ -59,6 +59,8 @@ class CorreosTracker:
 
         if "transit" in hl:
             status = "in_transit"
+        elif "envio listo para entregar" in hl:
+            status = "in_transit"
         elif "entregad" in hl or "delivered" in hl:
             status = "delivered"
         else:
